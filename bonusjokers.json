@@ -1,0 +1,16 @@
+{
+  "id": "bonusjkrs",
+  "name": "BonusJokers",
+  "display_name": "Bonus Jokers",
+  "author": [ "Gaph" ],
+  "description": "A simple mod with some custom jokers to learn the ropes of modding Balatro. Plan to keep adding onto it in the future!",
+  "prefix": "bonusjkrs",
+  "main_file": "main.lua",
+  "priority": 0,
+  "badge_colour": "21AAFF",
+  "badge_text_colour": "A3E7F6",
+  "version": "1.0.0",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0404a)"
+  ]
+}
