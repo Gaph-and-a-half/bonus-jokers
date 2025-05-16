@@ -10,7 +10,7 @@ local ed = ease_dollars
 function ease_dollars(mod, x)
     ed(mod, x)
     for i = 1, #G.jokers.cards do
-        local effects = G.jokers.cards[i]:calculate_joker({ A_ease_dollars = to_big(mod) })
+	    eval_card(G.jokers.cards[i], { BNS_ease_dollars = to_big(mod)})
     end
 end
 
@@ -72,8 +72,8 @@ SMODS.Joker{ --Archibald
     end,
 
     calculate = function(self, card, context)
-        if context.A_ease_dollars and not context.blueprint then
-            if context.A_ease_dollars > to_big(0) and pseudorandom('archi') < G.GAME.probabilities.normal / card.ability.extra.odds then
+        if context.BNS_ease_dollars and not context.blueprint then
+            if context.BNS_ease_dollars > to_big(0) and pseudorandom('archi') < G.GAME.probabilities.normal / card.ability.extra.odds then
                 card.ability.extra.XMult = card.ability.extra.XMult + card.ability.extra.XMultMod
                 card_eval_status_text(card, 'extra', nil, nil, nil, {
                     message = localize{type='variable',key='a_xmult',vars={card.ability.extra.XMult}},
